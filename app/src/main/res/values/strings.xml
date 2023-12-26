@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">google_maps_poi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_maps">MapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_UC">DESCRIPTION</string>
+    <string name="captured_photo_CD">captured photo</string>
+    <string name="title_UC">TITLE</string>
+    <string name="delete_MI">delete</string>
+    <string name="camera_MI">Camera</string>
+    <string name="save_MI">Save</string>
+    <string name="add_MI">add</string>
+</resources>
