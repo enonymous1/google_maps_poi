@@ -1,2 +1,2 @@
 # google_maps_poi
-Google Maps API - POI
+ Google Maps API - POI
