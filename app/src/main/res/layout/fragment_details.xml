@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".details.DetailsFragment" >
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/detailsAppBar"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/detailsToolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/menu_details"
-        app:title="Marker Details" />
+        app:title="@string/marker_details_title" />
+
+    <ImageView
+        android:id="@+id/detailsImageView"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/captured_photo_cd"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailsToolbar" />
 
     <TextView
         android:id="@+id/detailsTitleView"
@@ -28,11 +36,22 @@
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:minHeight="48dp"
-        android:text="@string/title_UC"
-        app:autoSizeTextType="uniform"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsAppBar" />
+        app:layout_constraintTop_toBottomOf="@id/detailsImageView" />
+
+    <TextView
+        android:id="@+id/detailsCategoryView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailsTitleView" />
 
     <TextView
         android:id="@+id/detailsDescView"
@@ -41,29 +60,20 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:gravity="center"
-        android:minHeight="35dp"
-        android:text="@string/description_UC"
-        app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsTitleView" />
+        app:layout_constraintTop_toBottomOf="@id/detailsCategoryView" />
 
-    <ImageView
-        android:id="@+id/detailsImageView"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/directionsButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/captured_photo_CD"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/get_directions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsDescView"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="ImageContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@id/detailsDescView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- New POI photos live in the app's external Pictures directory. -->
+    <external-files-path name="poi_photos" path="Pictures/poi_photos/" />
+</paths>

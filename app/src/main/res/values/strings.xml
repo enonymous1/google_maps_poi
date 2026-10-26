@@ -1,14 +1,27 @@
 <resources>
-    <string name="app_name">google_maps_poi</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_activity_maps">MapsActivity</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="description_UC">DESCRIPTION</string>
-    <string name="captured_photo_CD">captured photo</string>
-    <string name="title_UC">TITLE</string>
-    <string name="delete_MI">delete</string>
-    <string name="camera_MI">Camera</string>
-    <string name="save_MI">Save</string>
-    <string name="add_MI">add</string>
+    <string name="app_name">Google Maps POI</string>
+    <string name="add_marker_title">Add Marker</string>
+    <string name="marker_details_title">Marker Details</string>
+    <string name="title_hint">Title</string>
+    <string name="description_hint">Description</string>
+    <string name="category_hint">Category (optional)</string>
+    <string name="category_none">No category</string>
+    <string name="captured_photo_cd">Captured photo</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
+    <string name="camera">Camera</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="get_directions">Get directions</string>
+    <string name="location_format">Location: %1$f, %2$f</string>
+    <string name="no_location_found">No location found</string>
+    <string name="fill_all_fields">Please fill out all fields</string>
+    <string name="photo_create_failed">Could not create a photo file</string>
+    <string name="poi_not_found">That POI no longer exists</string>
+    <string name="no_maps_app">No maps app is available to open directions</string>
+    <string name="delete_marker_title">Delete Marker</string>
+    <string name="delete_marker_message">Are you sure you want to delete this marker? The photo file itself is kept.</string>
 </resources>

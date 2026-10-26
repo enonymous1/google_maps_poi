@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.enonymous1.googlemapspoi.ui.map.MapFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_mapFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.enonymous1.googlemapspoi.ui.form.FormFragment"
+        android:label="@string/add_marker_title" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.enonymous1.googlemapspoi.ui.details.DetailsFragment"
+        android:label="@string/marker_details_title">
+        <action
+            android:id="@+id/action_detailsFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+    </fragment>
+
+</navigation>

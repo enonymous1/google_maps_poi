@@ -1,0 +1,29 @@
+name: Android CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v3
+      # The real key lives in local.properties on a developer machine and is
+      # never committed. CI only needs a placeholder so the build can run;
+      # the map itself renders blank with a dummy key, which is expected.
+      - name: Provide dummy Maps key for CI build
+        run: printf 'MAPS_API_KEY=CI_DUMMY_KEY\n' > local.properties
+      - name: Run unit tests and build debug APK
+        run: ./gradlew testDebugUnitTest assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
