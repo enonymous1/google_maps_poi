@@ -12,6 +12,9 @@ import java.io.File
  * - "SAVED" (vs "DELETED") in TAG_MAKER_NOTE
  * - coordinates in the EXIF GPS tags
  *
+ * The same format is also used by the 2025 CE01 variant, which wrote its
+ * GPS coordinates itself, so its SAVED photos normally have coordinates.
+ *
  * Files marked DELETED, files with no GPS coordinates, and unreadable files
  * are skipped, never imported. Imported rows keep pointing at the original
  * photo file, so no photo is copied or moved. This runs at most once per

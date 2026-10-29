@@ -49,4 +49,24 @@ class ExifMigrationTest {
         assertEquals("", poi?.description)
         assertEquals("/Pictures/map_images/IMG_1.jpg", poi?.photoPath)
     }
+
+    @Test
+    fun ce01StylePhotoWithAppWrittenGpsIsImported() {
+        // CE01 variant: same folder and EXIF tags, GPS written by the app.
+        val poi = ExifMigration.toPoi(
+            ExifMigration.LegacyPhoto(
+                title = "Overlook",
+                description = "Sunset",
+                latitude = 38.0,
+                longitude = -78.5,
+                photoPath = "/Pictures/map_images/JPEG_20250514_120000_.jpg",
+            )
+        )
+        assertEquals("Overlook", poi?.title)
+        assertEquals("Sunset", poi?.description)
+        assertEquals("", poi?.category)
+        assertEquals(38.0, poi?.latitude)
+        assertEquals(-78.5, poi?.longitude)
+        assertEquals("/Pictures/map_images/JPEG_20250514_120000_.jpg", poi?.photoPath)
+    }
 }

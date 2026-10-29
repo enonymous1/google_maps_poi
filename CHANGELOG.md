@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Legacy import verified against the 2025 CE01 variant, which used the same `Pictures/map_images` folder and EXIF tags and wrote its own GPS coordinates. No migration code change was needed; a regression test pins the CE01-style mapping, and the README notes the coverage.
+
 ## 2.0.0 — 2026-10-26
 
 Modernization on top of the v1 history (2023-12-25):
